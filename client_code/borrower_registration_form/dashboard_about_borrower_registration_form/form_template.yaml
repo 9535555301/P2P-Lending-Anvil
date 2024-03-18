@@ -5,7 +5,7 @@ components:
 - name: flow_panel_1
   properties: {align: justify}
   type: FlowPanel
-  layout_properties: {grid_position: 'FFMZAX,LRGGTY', full_width_row: true}
+  layout_properties: {grid_position: 'LFJREP,SCMPCN', full_width_row: true}
   components:
   - name: image_1_copy_copy_1
     properties: {role: null, vertical_align: center, height: 39, tooltip: '', border: '',
@@ -14,76 +14,137 @@ components:
       spacing_below: small, background: '', horizontal_align: left}
     type: Image
     layout_properties: {width: 181}
-- type: form:borrower_registration_form.logout
+  - type: form:borrower_registration_form.logout
+    properties: {}
+    name: logout_1
+    layout_properties: {}
+- type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
   properties: {}
-  name: logout_1
-  layout_properties: {grid_position: 'FFMZAX,LSJVEB', full_width_row: true}
-- type: form:lendor_registration_form.navigation_bar_main_lender
-  properties: {}
-  name: navigation_bar_main_lender_1
-  layout_properties: {grid_position: 'HJMYXE,HCPRZE'}
+  name: navigation_form_dashboard_1
+  layout_properties: {grid_position: 'KKYDME,QSIXKP'}
+- name: spacer_1
+  properties: {height: 0}
+  type: Spacer
+  layout_properties: {grid_position: 'AUWKBR,INVIZT'}
 - name: outlined_card_1
   properties: {role: outlined-card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'BZBUAY,KLYYES'}
+  layout_properties: {grid_position: 'AOTSES,HURNTB', full_width_row: true}
   components:
   - name: label_1
-    properties: {role: title, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: Contact us, font_size: 24, font: a, spacing_above: small,
+    properties: {role: title, align: center, tooltip: '', border: '', foreground: white,
+      visible: true, text: About Us, font_size: 24, font: a, spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
       bold: true, underline: true, icon: ''}
     type: Label
-    layout_properties: {grid_position: 'SJACAW,FILMEW'}
-  - name: label_2
-    properties: {icon: 'fa:location-arrow', text: ' Ground Floor, A-217,
-
-        Transport Nagar, Sector 69,
-
-        Uttar Pradesh - 201301', icon_align: left_edge, bold: false, italic: false,
-      align: left}
+    layout_properties: {grid_position: 'LTJKUA,UAZQOO', full_width_row: true}
+  - name: label_3
+    properties: {text: Kotak is a Leading Peer to Peer Lending Platform in India,
+      bold: true, font_size: 25, align: center, underline: true}
     type: Label
-    layout_properties: {grid_position: 'EHFVTK,ZWONLN'}
-    data_bindings: []
+    layout_properties: {grid_position: 'CYVIXX,WKBQMI'}
+  - name: image_1
+    properties: {source: 'https://www.leadsquared.com/wp-content/uploads/2021/11/What-is-P2P-lending-Lending-Cycle.png'}
+    type: Image
+    layout_properties: {grid_position: 'KPEKWP,RCAWZV'}
+  - name: label_2
+    properties: {text: 'P2P Gold is an online Peer to Peer Lending (P2P Lending) marketplace
+        which connects verified borrowers looking for unsecured loans with investors
+        looking for an investment opportunity to make higher risk-adjusted returns.The
+        entire process of the loan application to credit evaluation, investment, fund
+        transfer, and repayment is completely online to facilitate seamless operation.',
+      font_size: 20, italic: false, bold: false, font: a, align: center}
+    type: Label
+    layout_properties: {grid_position: 'SATUHG,JQEPZP'}
+  - name: label_4
+    properties: {text: 'Why Borrow At P2P Gold?', bold: true, align: center, underline: true,
+      font_size: 20, background: '#0b2547', foreground: white}
+    type: Label
+    layout_properties: {grid_position: 'LMIMLK,DETZVI', row_background: '#0b2547'}
+  - name: grid_panel_1
+    properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'UCLZTY,HHYJTS'}
+    components:
+    - name: image_2
+      properties: {source: 'data:image/jpeg;base64,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',
+        height: 139.39996337890625}
+      type: Image
+      layout_properties: {row: KGWDWG, width_xs: 5, col_xs: 0}
+      event_bindings: {mouse_enter: image_2_mouse_enter, mouse_leave: image_2_mouse_leave}
+    - name: label_5
+      properties: {text: Borrowers can get P2P loans at attractive interest rates as we go beyond CIBIL and assess their profile based on 40+ parameters using our proprietary credit score model.,
+        font_size: 18, italic: true, icon: 'fa:angle-right', icon_align: left_edge,
+        bold: true, align: left}
+      type: Label
+      layout_properties: {row: KGWDWG, width_xs: 7, col_xs: 5}
+    - name: label_9
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+        visible: false, text: Low Intrest Rates, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {row: KHJLXU, width_xs: 5, col_xs: 0, width: 242.078}
+    - name: label_6
+      properties: {text: 'Provides a seamless user experience in terms of ease of
+          transaction, ability to view detailed account statements, transaction analysis,
+          and many more features.', bold: true, italic: true, font_size: 18, icon: 'fa:angle-right',
+        icon_align: left_edge}
+      type: Label
+      layout_properties: {row: ADSGEK, width_xs: 6, col_xs: 0}
+    - name: image_2_copy
+      properties: {source: 'https://s.yimg.com/ny/api/res/1.2/PtAb4uUE0PcqIqbjOQEG9g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://s.yimg.com/os/creatr-uploaded-images/2023-06/fcedce10-144b-11ee-974f-3e451e06d038',
+        height: 155.79998779296875}
+      type: Image
+      layout_properties: {row: ADSGEK, width_xs: 6, col_xs: 6}
+      event_bindings: {mouse_enter: image_2_copy_mouse_enter, mouse_leave: image_2_copy_mouse_leave}
+    - name: label_10
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+        visible: false, text: Quick and Hassle Free, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {row: WZQUXY, width_xs: 6, col_xs: 6, width: 296.5}
+    - name: image_2_copy_copy
+      properties: {source: 'https://californiahealthline.org/wp-content/uploads/sites/3/2022/11/GettyImages-1281246367_3840x2560web.jpg',
+        height: 155.79998779296875}
+      type: Image
+      layout_properties: {row: MCHLAL, width_xs: 6, col_xs: 0}
+      event_bindings: {mouse_enter: image_2_copy_copy_mouse_enter, mouse_leave: image_2_copy_copy_mouse_leave}
+    - name: label_7
+      properties: {text: At the Borrowers can simply prepay their loans at their own convenience without any charges whatsoever and as many times as they wish.,
+        bold: true, italic: true, font_size: 18, icon: 'fa:angle-right', icon_align: left_edge}
+      type: Label
+      layout_properties: {row: MCHLAL, width_xs: 6, col_xs: 6}
+    - name: label_11
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+        visible: false, text: No Prepayment Penalty, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {row: QTVHAM, width_xs: 6, col_xs: 0, width: 296.5}
+    - name: label_8
+      properties: {text: 'We have a large pool of investors who are looking to invest
+          in individual projects approved by us. Once your loan project is listed
+          on us, it gets funded within a few days.', bold: true, italic: true, font_size: 18,
+        icon: 'fa:angle-right', icon_align: left_edge}
+      type: Label
+      layout_properties: {row: HUVAMZ, width_xs: 6, col_xs: 0}
+    - name: image_2_copy_copy_copy
+      properties: {source: 'https://www.gallerysystems.com/wp-content/uploads/Grants_2022_Blog.jpg',
+        height: 155.79998779296875}
+      type: Image
+      layout_properties: {row: HUVAMZ, width_xs: 4, col_xs: 7}
+      event_bindings: {mouse_enter: image_2_copy_copy_copy_mouse_enter, mouse_leave: image_2_copy_copy_copy_mouse_leave}
+    - name: label_12
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+        visible: false, text: Funding in Few Days, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {row: IJKTWS, width_xs: 6, col_xs: 6, width: 296.5}
   - name: spacer_3
     properties: {height: 11}
     type: Spacer
     layout_properties: {grid_position: 'HPOLAI,OKUOFV'}
-  - name: label_3
-    properties: {text: For investmet related queries, bold: true, underline: true,
-      font_size: 15}
-    type: Label
-    layout_properties: {grid_position: 'FNKXCP,SOGVCM'}
-  - name: label_3_copy
-    properties: {text: For Loan related queries, bold: true, underline: true, font_size: 15}
-    type: Label
-    layout_properties: {grid_position: 'FNKXCP,KZGAWG'}
-  - name: label_5
-    properties: {italic: false, icon: 'fa:phone', text: +91-7894561235}
-    type: Label
-    layout_properties: {grid_position: 'WNGQOY,ICMGWM'}
-  - name: label_5_copy
-    properties: {italic: false, icon: 'fa:phone', text: +91-7894132141}
-    type: Label
-    layout_properties: {grid_position: 'WNGQOY,YOBWAO'}
-  - name: label_6
-    properties: {icon: 'fa:envelope', text: '  Kotakinvestment@p2p.coom'}
-    type: Label
-    layout_properties: {grid_position: 'GULBBQ,VSSLMU'}
-  - name: label_6_copy
-    properties: {icon: 'fa:envelope', text: '  Kotakloan@p2p.coom'}
-    type: Label
-    layout_properties: {grid_position: 'GULBBQ,LYIMGS'}
-  - name: label_3_copy_2
-    properties: {text: For corporate/genral queries, bold: true, underline: true,
-      font_size: 15, align: center}
-    type: Label
-    layout_properties: {grid_position: 'IZMHZK,LXZOEB'}
-  - name: label_5_copy_copy
-    properties: {italic: false, icon: 'fa:phone', text: +91-7894132141, align: center}
-    type: Label
-    layout_properties: {grid_position: 'UIZIXJ,BCVWLG'}
-  - name: label_6_copy_copy
-    properties: {icon: 'fa:envelope', text: '  Kotakfunding@p2p.coom', align: center}
-    type: Label
-    layout_properties: {grid_position: 'DVAXOA,BMHVNJ'}
 is_package: true

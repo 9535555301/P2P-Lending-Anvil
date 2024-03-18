@@ -18,10 +18,10 @@ components:
   properties: {}
   name: logout_1
   layout_properties: {grid_position: 'FFMZAX,KTFADO', full_width_row: true}
-- type: form:lendor_registration_form.Navigation_bar_lender_dashbord
+- type: form:lendor_registration_form.navigation_bar_main_lender
   properties: {}
-  name: navigation_bar_lender_dashbord_1
-  layout_properties: {grid_position: 'SXEAWZ,HOPNSO'}
+  name: navigation_bar_main_lender_1
+  layout_properties: {grid_position: 'UWFKXX,VKRTKI'}
 - name: outlined_card_1
   properties: {role: outlined-card, col_widths: '{}'}
   type: ColumnPanel
