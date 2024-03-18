@@ -17,3 +17,4 @@ class home_button_admin(home_button_adminTemplate):
 
   def button_1_click(self, **event_args):
     open_form('admin.dashboard')
+

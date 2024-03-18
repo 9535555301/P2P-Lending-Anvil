@@ -104,12 +104,6 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
     layout_properties: {x: 10, y: 87.1500244140625, width: 938.4}
-  - name: product
-    properties: {}
-    type: Label
-    layout_properties: {x: 365.2250061035156, y: 10, width: 372}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - type: TextArea
     properties: {role: null, align: left, height: 56, tooltip: '', placeholder: '',
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
@@ -120,3 +114,9 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''product_description'']', writeback: true}
     event_bindings: {}
+  - name: product
+    properties: {}
+    type: Label
+    layout_properties: {x: 374.2249984741211, y: 10, width: 372}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}

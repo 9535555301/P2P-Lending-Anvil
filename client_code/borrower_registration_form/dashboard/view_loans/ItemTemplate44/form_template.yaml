@@ -77,14 +77,14 @@ components:
     layout_properties: {x: 355.9250076301396, y: 33.624996948987246, width: 563.7999877929688}
     data_bindings:
     - {property: text, code: 'self.item[''product_description'']', writeback: true}
-  - name: product
-    properties: {}
-    type: Label
-    layout_properties: {x: 355.92501068115234, y: 9, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - name: label_3
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
       foreground: grey}
     type: Label
     layout_properties: {x: 10, y: 79.237548828125, width: 938.4}
+  - name: product
+    properties: {}
+    type: Label
+    layout_properties: {x: 369.92501068115234, y: 9, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
