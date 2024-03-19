@@ -14,7 +14,7 @@ class new_loan_request(new_loan_requestTemplate):
 
         options = app_tables.fin_product_details.search()
         # Exclude empty strings from the drop-down options
-        option_strings = [option['name'] for option in options if option['name'].strip()]
+        option_strings = [option['product_group'] for option in options if option['product_group'].strip()]
         self.name.items = option_strings
         self.name.selected_value = None  # Set to None initially, as there is no default selection
 
@@ -35,11 +35,11 @@ class new_loan_request(new_loan_requestTemplate):
             self.label_4.visible = True
             # Fetch product categories based on the selected loan type
             product_categories = app_tables.fin_product_details.search(
-                name_group=self.name.selected_value
+                product_group=self.name.selected_value
             )
             if product_categories:
                 # Display product categories in drop_down_2, excluding empty strings
-                self.drop_down_2.items = [category['name_categories'] for category in product_categories if category['name_categories'].strip()]
+                self.drop_down_2.items = [category['product_categories'] for category in product_categories if category['product_categories'].strip()]
                 self.drop_down_2.selected_value = None
 
     def drop_down_2_change(self, **event_args):
