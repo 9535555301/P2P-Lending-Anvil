@@ -1,0 +1,18 @@
+is_package: true
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"FMCEYC":25,"TGFRDV":20,"YRJSLD":15}'}
+components:
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'FIZPDI,FMCEYC'}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'FIZPDI,TGFRDV'}
+- name: link_1
+  properties: {text: Edit Details}
+  type: Link
+  layout_properties: {grid_position: 'FIZPDI,YRJSLD'}
+  event_bindings: {click: link_1_click}

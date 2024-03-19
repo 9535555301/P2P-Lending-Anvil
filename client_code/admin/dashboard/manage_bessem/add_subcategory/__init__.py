@@ -26,7 +26,10 @@ class add_subcategory(add_subcategoryTemplate):
     self.repeating_panel_6.items = app_tables.fin_admin_beseem_categories.search(group_name="organization_type")
     self.repeating_panel_7.items = app_tables.fin_admin_beseem_categories.search(group_name="present_address")
     self.repeating_panel_8.items = app_tables.fin_admin_beseem_categories.search(group_name="duration_at_address")
-
+    self.repeating_panel_9.items = app_tables.fin_admin_beseem_categories.search(group_name="salary_type")
+    self.repeating_panel_10.items = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession')
+    self.repeating_panel_11.items = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')
+  
   def back_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("admin.dashboard.manage_bessem")
@@ -105,10 +108,10 @@ class add_subcategory(add_subcategoryTemplate):
   def profession_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_7.text.lower()
-    valid_statuses = ['student', 'employee', 'self employment']
-    if entered_sub not in valid_statuses:
-        alert("Please enter a valid profession: 'Student', 'Employee', 'Self employment'.")
-        return
+    # valid_statuses = ['student', 'employee', 'self employment']
+    # if entered_sub not in valid_statuses:
+    #     alert("Please enter a valid profession: 'Student', 'Employee', 'Self employment'.")
+    #     return
     entered_min_pts = int(self.text_box_8.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='profession',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_7.text = ' '
@@ -227,6 +230,88 @@ class add_subcategory(add_subcategoryTemplate):
       new_group_row = app_tables.fin_admin_beseem_groups.add_row(
             group_name="duration_at_address", max_points=max_points
         )
+
+  def salarytype_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    entered_sub = self.text_box_18.text.lower()
+    entered_min_pts = int(self.text_box_19.text)
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='salary_type',sub_category=entered_sub,min_points=entered_min_pts)
+    self.text_box_18.text = ' '
+    self.text_box_19.text = ' '
+    self.refresh()
+
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='salary_type')]
+
+    max_points = max(existing_min_points + [entered_min_pts])
+
+    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="salary_type")
+    if existing_group_row:
+      existing_group_row['max_points'] = max_points
+      existing_group_row.update()
+
+    else:
+      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+            group_name="salary_type", max_points=max_points
+        )
+
+  def spouse_profession_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+    entered_sub = self.text_box_20.text.lower()
+    entered_min_pts = int(self.text_box_21.text)
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='spouse_profession',sub_category=entered_sub,min_points=entered_min_pts)
+    self.text_box_20.text = ' '
+    self.text_box_21.text = ' '
+    self.refresh()
+
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession')]
+
+    max_points = max(existing_min_points + [entered_min_pts])
+
+    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="spouse_profession")
+    if existing_group_row:
+      existing_group_row['max_points'] = max_points
+      existing_group_row.update()
+
+    else:
+      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+            group_name="spouse_profession", max_points=max_points
+        )
+
+  def age_of_business_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    entered_sub = self.text_box_22.text.lower()
+    entered_min_pts = int(self.text_box_23.text)
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='age_of_business',sub_category=entered_sub,min_points=entered_min_pts)
+    self.text_box_22.text = ' '
+    self.text_box_23.text = ' '
+    self.refresh()
+
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')]
+
+    max_points = max(existing_min_points + [entered_min_pts])
+
+    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="age_of_business")
+    if existing_group_row:
+      existing_group_row['max_points'] = max_points
+      existing_group_row.update()
+
+    else:
+      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+            group_name="age_of_business", max_points=max_points
+        )
+    
+  def salary_type_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = True
     
   def gender_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -238,6 +323,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
 
   def qualification_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -249,6 +335,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
 
   def marrital_status_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -260,6 +347,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
 
   def profession_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -271,6 +359,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
 
   def all_loans_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -282,6 +371,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
 
   def organization_type_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -293,6 +383,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = True
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
 
   def present_address_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -304,6 +395,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = True
     self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
 
   def duration_at_address_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -315,4 +407,40 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = True
+    self.grid_panel_9.visible = False
+
+  def spouse_profession_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = True
+    self.grid_panel_11.visible = False
+
+  def age_of_business_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = True
+
+  
+
+  
+
+  
+  
   

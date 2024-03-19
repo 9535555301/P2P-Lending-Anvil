@@ -34,7 +34,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
   def button_1_next_click(self, **event_args):
     status_of_user = self.Profesion_borrower_registration_form_drop_down.selected_value
     user_id = self.userId
-    if status_of_user not in ['Student', 'Employee', 'Self Employment']:
+    if status_of_user not in ['Student', 'Employee', 'Self employment']:
       Notification("Please select a valid profession status").show()
     elif not user_id:
       Notification("User ID is missing").show()
@@ -44,7 +44,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student',user_id=user_id)
     elif status_of_user == 'Employee':
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1',user_id=user_id)
-    elif status_of_user == 'Self Employment':
+    elif status_of_user == 'Self employment':
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_self_employment',user_id=user_id) 
     # else:
     #   open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=user_id)

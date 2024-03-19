@@ -1,0 +1,68 @@
+container: {type: ColumnPanel}
+components:
+- name: column_panel_1
+  properties: {col_widths: '{"FYQGWM":20,"ASDCVV":20,"UCDNIP":10,"SMUBYP":10}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'LLRWQK,COABPV'}
+  components:
+  - type: form:admin.dashboard.home_button_admin
+    properties: {}
+    name: home_button_admin_1
+    layout_properties: {grid_position: 'GVFDHL,GEBRUZ'}
+  - name: spacer_1
+    properties: {height: 63}
+    type: Spacer
+    layout_properties: {grid_position: 'JRGSMO,GXTDFM'}
+  - name: grid_panel_1
+    properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'UYNUYK,INHPIQ'}
+    components:
+    - name: label_1
+      properties: {text: Add Subcategory, bold: true, align: center}
+      type: Label
+      layout_properties: {row: FDQLVS, width_xs: 4, col_xs: 0}
+    - name: label_2
+      properties: {text: Add Points, bold: true, align: center}
+      type: Label
+      layout_properties: {row: FDQLVS, width_xs: 4, col_xs: 4}
+  - name: text_box_1
+    properties: {role: outlined, align: center}
+    type: TextBox
+    layout_properties: {grid_position: 'FAYIQN,FYQGWM'}
+    data_bindings:
+    - {property: text, code: 'self.item[''name_group'']', writeback: true}
+  - name: text_box_2
+    properties: {role: outlined, align: center}
+    type: TextBox
+    layout_properties: {grid_position: 'FAYIQN,ASDCVV'}
+    data_bindings:
+    - {property: text, code: 'self.item[''name_categories'']', writeback: true}
+    event_bindings: {pressed_enter: text_box_2_pressed_enter}
+  - name: save
+    properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: SAVE, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0b2547', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'FAYIQN,UCDNIP'}
+    event_bindings: {click: save_click}
+  - name: delete
+    properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: DELETE, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#db2332', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'FAYIQN,SMUBYP'}
+    event_bindings: {click: delete_click}
+- type: Button
+  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    bold: true, underline: false, icon: 'fa:backward'}
+  name: button_1_copy_3
+  layout_properties:
+    col_widths: {}
+    grid_position: CSJZCR,EDDFYR
+  event_bindings: {click: button_1_copy_3_click}
+is_package: true
