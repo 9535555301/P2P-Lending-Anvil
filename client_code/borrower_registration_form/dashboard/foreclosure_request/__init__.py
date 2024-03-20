@@ -8,6 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+
 class foreclosure_request(foreclosure_requestTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
@@ -50,7 +51,7 @@ class foreclosure_request(foreclosure_requestTemplate):
                             }
                             loans.append(loan_data)
 
-                    # Set the filtered data as the items for the repeating panel
+
                     self.repeat.items = loans
                 except anvil.tables.TableError as e:
                     print(f"Error: {e}")
@@ -61,12 +62,9 @@ class foreclosure_request(foreclosure_requestTemplate):
             # Handle the case when no user is logged in
             print("No user logged in")
 
+  
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard')
 
-    # def is_loan_eligible(self, loan):
-    #     # Check eligibility based on 'extension_allowed' from product_details
-    #     product_details_record = app_tables.fin_product_details.get(product_id=loan['product_id'])
-    #     return product_details_record['foreclose_type'] == 'Eligible'
 
