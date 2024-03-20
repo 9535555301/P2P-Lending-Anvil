@@ -77,6 +77,7 @@ components:
       icon: 'fa:comment'}
     name: Report_A_Problem
     layout_properties: {}
+    event_bindings: {click: Report_A_Problem_click}
   - name: notification_link
     properties: {text: Notification, foreground: white, icon: 'fa:bell'}
     type: Link
