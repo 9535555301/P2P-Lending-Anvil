@@ -55,7 +55,7 @@ class borrowers(borrowersTemplate):
         self.result.append({'coustmer_id' : self.list_1[i], 'full_name' : self.list_2[i], 'email_user' : self.list_3[i], 'usertype' : self.list_4[i], 'last_confirm' : self.list_5[i],
                           'date_of_birth' : self.list_6[i], 'mobile' : self.list_7[i], 'registration_approve' : self.list_8[i]})
 
-      self.repeating_panel_1.items = self.result
+      self.items = self.result
 
       print(self.list_1, self.list_2, self.list_3)
       print(self.result)

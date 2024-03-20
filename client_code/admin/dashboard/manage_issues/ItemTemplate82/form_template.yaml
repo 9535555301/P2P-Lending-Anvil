@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - name: xy_panel_1
-  properties: {height: 262, role: outlined-card}
+  properties: {height: 300, role: outlined-card}
   type: XYPanel
   layout_properties:
     col_widths: {}
@@ -13,68 +13,68 @@ components:
     layout_properties: {x: 1.0625, y: 3.40625, width: 66}
     data_bindings:
     - {property: source, code: 'self.item[''user_photo'']'}
-  - name: name
+  - name: label_1
     properties: {bold: true}
     type: Label
     layout_properties: {x: 70.0625, y: 3.40625, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''name'']', writeback: false}
-  - name: mobile
+    - {property: text, code: 'self.item[''full_name'']', writeback: false}
+  - name: label_6
     properties: {}
     type: Label
     layout_properties: {x: 70.0625, y: 30.796850000000006, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''mobile_number'']', writeback: false}
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Title :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {x: 336.1875, y: 3.40625, width: 160}
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Date :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_2
-    layout_properties: {x: 336.1875, y: 30.78125, width: 160}
-  - name: title
-    properties: {bold: false, align: left}
-    type: Label
-    layout_properties: {x: 461, y: 3.40625, width: 293}
-    data_bindings:
-    - {property: text, code: 'self.item[''issue_occured'']', writeback: false}
-  - name: date
-    properties: {align: left, bold: false}
-    type: Label
-    layout_properties: {x: 459.625, y: 30.78125, width: 294.375}
-    data_bindings:
-    - {property: text, code: 'self.item[''report_date'']', writeback: false}
+    - {property: text, code: 'self.item[''mobile'']', writeback: false}
   - name: label_3
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
       foreground: grey, align: center}
     type: Label
     layout_properties: {x: -7, y: 76.78125, width: 942}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Customer ID, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: customer_id
+    layout_properties: {x: 10, y: 122.7750244140625, width: 160}
+  - type: Label
+    properties: {}
+    name: link_1
+    layout_properties: {x: 153.1999969482422, y: 122.7750244140625, width: 160}
+    data_bindings:
+    - {property: text, code: 'self.item[''coustmer_id'']'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Email, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {x: 10, y: 174.5875244140625, width: 160}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {x: 153.1999969482422, y: 174.5875244140625, width: 160}
+    data_bindings:
+    - {property: text, code: 'self.item[''email_user'']'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Date of Birth, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_11
+    layout_properties: {x: 10, y: 220.5875244140625, width: 160}
+  - type: Label
+    properties: {}
+    name: label_5
+    layout_properties: {x: 139.1999969482422, y: 220.5875244140625, width: 160}
+    data_bindings:
+    - {property: text, code: 'self.item[''date_of_birth'']'}
   - type: Button
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Problem Solved, font_size: null,
+      foreground: 'theme:On Primary', visible: true, text: View Profile, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_1
-    layout_properties: {x: -14, y: 232, width: 963}
+    layout_properties: {x: -79, y: 273, width: 963}
     event_bindings: {click: button_1_click}
-  - name: label_4
-    properties: {text: 'Problem Description:', bold: true}
-    type: Label
-    layout_properties: {x: 21.046875, y: 100.046875, width: 200}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    name: issue_description
-    layout_properties: {x: 21.09375, y: 136.875, width: 916}
-    data_bindings:
-    - {property: text, code: 'self.item[''issue_description'']'}
 is_package: true
