@@ -5,7 +5,7 @@ components:
 - type: FlowPanel
   properties: {}
   name: flow_panel_1
-  layout_properties: {grid_position: 'VOACOG,SNOCRA'}
+  layout_properties: {grid_position: 'VOACOG,SNOCRA', full_width_row: true}
   components:
   - name: image_1_copy_1_copy_1_copy_1
     properties: {role: null, vertical_align: center, height: 49, tooltip: '', border: '',
@@ -16,15 +16,16 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: PGUIIP,CTBMBU
-      width: 413
+      width: null
+      expand: true
 - type: form:borrower_registration_form.logout
-  properties: {}
+  properties: {prop: '', prop_2: ''}
   name: logout_1
-  layout_properties: {grid_position: 'VOACOG,QUUPJJ'}
+  layout_properties: {grid_position: 'VOACOG,QUUPJJ', full_width_row: true}
 - type: form:lendor_registration_form.navigation_bar_main_lender
   properties: {}
   name: navigation_bar_main_lender_1
-  layout_properties: {grid_position: 'ZGAALX,RJVCVE'}
+  layout_properties: {grid_position: 'ZGAALX,RJVCVE', full_width_row: true}
 - name: label_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Institutional Type, font_size: null, font: '', spacing_above: small,

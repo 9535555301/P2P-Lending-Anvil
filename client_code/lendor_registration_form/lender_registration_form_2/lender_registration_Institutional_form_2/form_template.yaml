@@ -5,7 +5,7 @@ components:
 - type: FlowPanel
   properties: {}
   name: flow_panel_1
-  layout_properties: {grid_position: 'LNVBXO,DNMSIQ'}
+  layout_properties: {grid_position: 'LNVBXO,DNMSIQ', full_width_row: true}
   components:
   - name: image_1_copy_1_copy_1
     properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -16,15 +16,16 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: ',FXWRAD'
-      width: 486
+      width: null
+      expand: true
 - type: form:borrower_registration_form.logout
-  properties: {}
+  properties: {prop: '', prop_2: ''}
   name: logout_1
-  layout_properties: {grid_position: 'LNVBXO,BJMBNA'}
+  layout_properties: {grid_position: 'LNVBXO,BJMBNA', full_width_row: true}
 - type: form:lendor_registration_form.navigation_bar_main_lender
   properties: {}
   name: navigation_bar_main_lender_1
-  layout_properties: {grid_position: 'EXCZML,VSXRMI'}
+  layout_properties: {grid_position: 'EXCZML,VSXRMI', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Institutional Type, font_size: null, font: '', spacing_above: small,

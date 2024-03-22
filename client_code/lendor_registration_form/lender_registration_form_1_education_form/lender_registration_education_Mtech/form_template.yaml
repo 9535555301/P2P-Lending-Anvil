@@ -3,9 +3,11 @@ container:
   properties: {col_widths: '{}'}
 components:
 - type: FlowPanel
-  properties: {}
+  properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '',
+    border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
+    background: ''}
   name: flow_panel_1
-  layout_properties: {grid_position: 'HZQEFD,BBTOLR'}
+  layout_properties: {grid_position: 'HZQEFD,BBTOLR', full_width_row: true}
   components:
   - name: image_1_copy_1_copy_1
     properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -16,15 +18,16 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: TIYFPR,YGXTOI
-      width: 296
+      width: null
+      expand: true
 - type: form:borrower_registration_form.logout
   properties: {}
   name: logout_1
-  layout_properties: {grid_position: 'HZQEFD,PEWLIY'}
+  layout_properties: {grid_position: 'HZQEFD,PEWLIY', full_width_row: true}
 - type: form:lendor_registration_form.navigation_bar_main_lender
   properties: {}
   name: navigation_bar_main_lender_1
-  layout_properties: {grid_position: 'CYNIUK,KSTPPX'}
+  layout_properties: {grid_position: 'CYNIUK,KSTPPX', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Education Details, font_size: null, font: '', spacing_above: small,

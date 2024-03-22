@@ -15,7 +15,8 @@ class new_loan_request(new_loan_requestTemplate):
         options = app_tables.fin_product_details.search()
         # Exclude empty strings from the drop-down options
         option_strings = [option['product_group'] for option in options if option['product_group'].strip()]
-        self.name.items = option_strings
+        unique_groups = set(option_strings)  # Remove duplicates using set
+        self.name.items = list(unique_groups)
         self.name.selected_value = None  # Set to None initially, as there is no default selection
 
         # Add a placeholder to drop_down_2
@@ -37,9 +38,11 @@ class new_loan_request(new_loan_requestTemplate):
             product_categories = app_tables.fin_product_details.search(
                 product_group=self.name.selected_value
             )
-            if product_categories:
-                # Display product categories in drop_down_2, excluding empty strings
-                self.drop_down_2.items = [category['product_categories'] for category in product_categories if category['product_categories'].strip()]
+            # Exclude duplicate categories
+            unique_categories = set(category['product_categories'] for category in product_categories if category['product_categories'].strip())
+            if unique_categories:
+                # Display unique product categories in drop_down_2
+                self.drop_down_2.items = list(unique_categories)
                 self.drop_down_2.selected_value = None
 
     def drop_down_2_change(self, **event_args):
@@ -113,11 +116,6 @@ class new_loan_request(new_loan_requestTemplate):
         # Exclude empty strings from the max_amount values
         data1_strings = [str(data['credit_limit']) for data in data if str(data['credit_limit']).strip()]
         self.max_amount_lb.text = data1_strings[0] if data1_strings else None
-    def max_amount_lb_show(self, **event_args):
-        data = app_tables.fin_borrower.search()
-        # Exclude empty strings from the max_amount values
-        data1_strings = [str(data['credit_limit']) for data in data if str(data['credit_limit']).strip()]
-        self.max_amount_lb.text = data1_strings[0] if data1_strings else None
 
     def button_1_click(self, **event_args):
         open_form("borrower_registration_form.dashboard")
@@ -142,5 +140,3 @@ class new_loan_request(new_loan_requestTemplate):
             # Handle the case where no product is selected
             self.label_8.visible = False
             self.product_description_label.text = ""
-
-    

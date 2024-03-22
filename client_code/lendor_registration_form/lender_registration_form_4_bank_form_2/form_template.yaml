@@ -11,14 +11,15 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: MUSUAK,YCTKQN
+    full_width_row: true
 - type: form:borrower_registration_form.logout
   properties: {}
   name: logout_1
-  layout_properties: {grid_position: 'MUSUAK,KPSXIR'}
+  layout_properties: {grid_position: 'MUSUAK,KPSXIR', full_width_row: true}
 - type: form:lendor_registration_form.navigation_bar_main_lender
   properties: {}
   name: navigation_bar_main_lender_1
-  layout_properties: {grid_position: 'WHVQXW,JZVZMG'}
+  layout_properties: {grid_position: 'WHVQXW,JZVZMG', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Applicant Bank Details, font_size: null, font: '', spacing_above: small,
