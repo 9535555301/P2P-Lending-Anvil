@@ -11,6 +11,7 @@ from anvil.tables import app_tables
 class lender_registration_individual_form_1(lender_registration_individual_form_1Template):
   def __init__(self,user_id, **properties):
     self.userId = user_id
+    user_id = int(user_id)
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     user_data = anvil.server.call('get_user_data', user_id)
