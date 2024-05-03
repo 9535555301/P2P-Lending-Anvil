@@ -15,7 +15,7 @@ components:
   name: content_panel
   components:
   - type: XYPanel
-    properties: {height: 505, visible: true}
+    properties: {height: 509.75, visible: true}
     layout_properties: {grid_position: 'AJQHBW,XCADDT'}
     name: xy_panel_1
     components:
