@@ -129,7 +129,7 @@ components:
       - name: column_panel_2
         properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
           wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-          spacing_below: small, background: '#CBCFD0'}
+          spacing_below: small, background: '#98c1d9'}
         type: ColumnPanel
         layout_properties: {x: 206.00001525878906, y: 343.7857208251953, width: 522}
         components:

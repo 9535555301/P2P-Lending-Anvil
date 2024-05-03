@@ -505,3 +505,12 @@ class manage_producs1(manage_producs1Template):
         self.label_14.visible = False
         self.npa.visible = False
         self.npa_status = "Non Performing Asset (₹)"
+
+    def Others_click(self, **event_args):
+        if "Others" in self.occupation:
+            self.Others.background = "#939191"
+            self.occupation.remove("Others")
+        else:
+            self.Others.background = "#0a2346"
+            self.occupation.append("Others")
+    

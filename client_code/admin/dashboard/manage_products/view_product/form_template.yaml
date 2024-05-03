@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: ''}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
@@ -36,12 +36,12 @@ components:
     layout_properties: {grid_position: 'POSQKM,AJXXVP'}
     components: []
   - name: label_1
-    properties: {font_size: 25, align: center, background: 'theme:Disabled Container',
-      text: ' Product details', role: outlined-card}
+    properties: {font_size: 25, align: center, background: '#98c1d9', text: ' Product
+        details', role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'FJXCIM,TDGLEB'}
   - name: column_panel_1
-    properties: {background: 'theme:Secondary Container', col_widths: '{"CJIRCR":10,"KEGSZU":10,"WUYSFB":10,"IHUKLD":10,"EMIVXP":20}',
+    properties: {background: '#98c1d9', col_widths: '{"CJIRCR":10,"KEGSZU":10,"WUYSFB":10,"IHUKLD":10,"EMIVXP":20}',
       role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'HSFBYO,OQVURQ'}

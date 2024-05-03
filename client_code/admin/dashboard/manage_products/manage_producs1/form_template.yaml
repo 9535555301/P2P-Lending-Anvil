@@ -180,6 +180,13 @@ components:
         properties: {height: 32}
         type: Spacer
         layout_properties: {grid_position: 'CYKTAG,OPVMZF'}
+      - name: label_3
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: "    Min Tenure\n    (In months)", font_size: 17, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        type: Label
+        layout_properties: {grid_position: 'CYKTAG,RSMUYG'}
       - name: label_9_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Lender Membership Type', font_size: 17, font: '',
@@ -276,20 +283,13 @@ components:
           underline: false}
         type: TextBox
         layout_properties: {grid_position: 'CYKTAG,LNOYAV WNTQXR,CLTPFV'}
-      - name: label_3
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: "    Min Tenure\n    (In months)", font_size: 17, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
-        type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ MLSNJU,DBMMMV'}
       - name: label_4
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: "    Max Tenure\n    (In months)", font_size: 17, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ KLHQOZ,SZCKXD'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ'}
       - name: min_tenure
         properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
           placeholder: Enter min tenure, border: '', enabled: true, foreground: '',
@@ -391,7 +391,7 @@ components:
         type: Button
         layout_properties: {grid_position: 'UNLDSP,NRTAHK'}
         event_bindings: {click: employee_click}
-      - name: employee_copy
+      - name: Others
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: Others, font_size: 16,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
