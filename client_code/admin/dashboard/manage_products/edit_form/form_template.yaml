@@ -342,13 +342,14 @@ components:
           italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
         type: Button
         layout_properties: {x: 0, y: 0, width: 200}
-      - name: employee_copy_2
+      - name: Others
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: Employee, font_size: null,
+          foreground: 'theme:On Primary', visible: true, text: Others, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
           italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
         type: Button
         layout_properties: {x: 833, y: 447.75, width: 133.9375}
+        event_bindings: {click: Others_click}
     - name: grid_panel_2
       properties: {}
       type: GridPanel

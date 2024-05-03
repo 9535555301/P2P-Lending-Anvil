@@ -5,6 +5,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import re
 from datetime import datetime, timedelta
+import anvil.server
 
 class star_1_borrower_registration_form_3_marital_married(star_1_borrower_registration_form_3_marital_marriedTemplate):
     selected_radio_button = None
@@ -481,7 +482,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
      if errors:
         Notification("\n".join(errors)).show()
      else:
-       another_person, related_person_name, related_person_dob, related_person_mob, related_person_profession, related_person_relation,user_id
+       another_person, related_person_name, related_person_dob, related_person_mob, related_person_profession, related_person_relation,self.userId
        anvil.server.call('add_lendor_spouse_details', 
                               another_person, related_person_name, related_person_dob, 
                               related_person_mob, related_person_profession, 
