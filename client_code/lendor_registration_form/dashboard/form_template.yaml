@@ -131,7 +131,7 @@ components:
   layout_properties: {grid_position: 'CCIIXU,HUNYKM GMQTUG,KNKICZ'}
   components:
   - name: column_panel_3
-    properties: {role: elevated-card, col_widths: '{"PQPPZT":25,"WLAJCK":35}'}
+    properties: {role: elevated-card, col_widths: '{"PQPPZT":20,"WLAJCK":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ERCHQY,YUAUSJ'}
     components:
@@ -150,16 +150,18 @@ components:
       type: Label
       layout_properties: {grid_position: 'FHZWVZ,WLAJCK KJAPCT,ITCNGP'}
   - name: column_panel_4
-    properties: {role: elevated-card}
+    properties: {role: elevated-card, col_widths: '{"KRHWBD":20,"ZHEDGR":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ERCHQY,NETDIR'}
     components:
     - name: image_2
-      properties: {height: 46.79998779296875}
+      properties: {height: 46.79998779296875, source: _/theme/profits.png}
       type: Image
       layout_properties: {grid_position: 'LIIRFK,KRHWBD'}
     - name: label_4
-      properties: {}
+      properties: {text: 'Opening Balance
+
+          '}
       type: Label
       layout_properties: {grid_position: 'LIIRFK,ZHEDGR PIXTGE,WWPOAT'}
     - name: label_5
@@ -167,10 +169,36 @@ components:
       type: Label
       layout_properties: {grid_position: 'LIIRFK,ZHEDGR GPTTVY,SQOBSC'}
   - name: column_panel_5
-    properties: {role: elevated-card}
+    properties: {role: elevated-card, col_widths: '{"UKYYYV":20,"UPASZV":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
+    components:
+    - name: image_3
+      properties: {height: 43.399932861328125, source: _/theme/piggy-bank.png}
+      type: Image
+      layout_properties: {grid_position: 'HVNINY,UKYYYV'}
+    - name: label_6
+      properties: {text: My Returns}
+      type: Label
+      layout_properties: {grid_position: 'HVNINY,UPASZV OMUQHW,ZECQCD'}
+    - name: label_7
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'HVNINY,UPASZV EEYXZV,GWYXLY'}
   - name: column_panel_6
-    properties: {role: elevated-card}
+    properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
+    components:
+    - name: image_4
+      properties: {height: 48.20001220703125, source: _/theme/loan.png}
+      type: Image
+      layout_properties: {grid_position: 'QAERLY,CUOOLO'}
+    - name: label_8
+      properties: {text: 'New loan '}
+      type: Label
+      layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
+    - name: label_9
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
