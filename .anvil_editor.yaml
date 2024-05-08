@@ -4,6 +4,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_marrital: '1706531986776697212699176.1029'
     lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Intermediate: '1700756697390552428798704.9375'
     admin.dashboard.lenders.view_profile_copy: '1700738331006824314442804.7479'
+    lendor_registration_form.dashboard.ItemTemplate104: WCFWJEXKS6WYWWJQITOHIPJGFELHCGVL
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate24: '1711807259111450116230267.0707'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate4: '1706093176660451392535162.64197'
     admin.dashboard.manage_bessem.add_subcategory.edit_salarytype: '171077252423755774820284.87712'
@@ -65,6 +66,7 @@ unique_ids:
     : '1706674264490661669917930.6699'
     admin.dashboard.admin_management.view_admins.ItemTemplate91: '1712062627271930406124276.6708'
     admin.dashboard.manage_cms.add_general_dropdowns.ItemTemplate67: '1710398612422247001502472.58334'
+    lendor_registration_form.dashboard.ItemTemplate104.RowTemplate7: C5SHIEXRJYMBBTSGSXEZWYVT5MTUTBBP
     borrower_registration_form.dashboard.view_loans.payment_details_b: '1705553114447539598095448.53357'
     lendor_registration_form.dashboard.lender_view_loans.ItemTemplate51: '170961220178749154151057.25884'
     admin.dashboard: '1699523403306752264878574.3744'
@@ -289,6 +291,7 @@ unique_ids:
     borrower_registration_form.dashboard.view_loans: '1699009593401243330903186.185'
     bank_users.main_form: '1700479916868316718897361.56647'
     borrower_registration_form.ots_dashboard: '1707465922694896334564412.1901'
+    lendor_registration_form.dashboard.RowTemplate8: HEJT6KCMLNY6HU5JSVGMNJWTJXGCSZT2
     admin.dashboard.manage_bessem.add_subcategory: '1709540917057950225264241.7568'
     admin.dashboard.manage_products.view_profile: '170072327892078386506068.2929'
     lendor_registration_form.Navigation_bar_lender_dashbord: '1706506675442701459967197.9349'
@@ -526,11 +529,13 @@ unique_ids:
     assigned.png: 5FZATNCCP5ER4TMQDDEY6PMVETJD4T27
     manage ascend score.png: '1714724938233833673819003.2296'
     hm4.png: '1713939928580345009782378.44037'
+    personal.png: NM2A6OW72GBF63JNAHBDWSKTZCFUH7AM
     travel_loan-removebg-preview.png: '171350403631352562509269.39421'
     wallet (2).png: '1703588462403137637183253.18884'
     performance tracker.png: '1714722616805168669609264.2579'
     p2p (2).png: '1712288671889400894103928.16595'
     profile-cards_bean.6b9a100.png: '1711704465672660384570250.994'
+    connection.png: F4VMVEUMASUCWYO2C5KVLNP6UVQB2BH7
     pri5.png: '1714132069864232033185572.65097'
     cms.png: '1714725716086220926856328.61465'
     personal loan1.jpg: '1713158653431849890589185.7283'

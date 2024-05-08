@@ -2,7 +2,7 @@ is_package: true
 custom_component: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"QFGZTD":10,"HUNYKM":33}', foreground: black, role: null}
+  properties: {col_widths: '{"QFGZTD":10,"HUNYKM":35}', foreground: black, role: null}
 components:
 - properties: {role: null, vertical_align: top, height: '48', tooltip: '', border: '',
     foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
@@ -25,14 +25,14 @@ components:
   layout_properties: {grid_position: 'CCIIXU,QFGZTD', full_width_row: true}
   components:
   - name: View_Loan_Extension
-    properties: {text: View Loan Extension, underline: false, align: left, italic: false,
-      role: outlined-card, background: '', foreground: black}
+    properties: {role: outlined-card, align: left, foreground: black, text: View Loan Extension,
+      spacing_above: none, spacing_below: none, italic: false, background: '', underline: false}
     type: Button
     layout_properties: {}
     event_bindings: {click: View_Loan_Extension_click}
   - name: View_Loan_Foreclosure
     properties: {text: View Loan Foreclosure, italic: false, align: left, role: outlined-card,
-      foreground: black}
+      foreground: black, spacing_above: none, spacing_below: none}
     type: Button
     layout_properties: {}
     event_bindings: {click: View_Loan_Foreclosure_click}
