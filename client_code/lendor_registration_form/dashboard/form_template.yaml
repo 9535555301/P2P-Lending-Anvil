@@ -2,7 +2,7 @@ is_package: true
 custom_component: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"QFGZTD":10,"HUNYKM":33}'}
+  properties: {col_widths: '{"QFGZTD":10,"HUNYKM":33}', foreground: black, role: null}
 components:
 - properties: {role: null, vertical_align: top, height: '48', tooltip: '', border: '',
     foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
@@ -25,69 +25,75 @@ components:
   layout_properties: {grid_position: 'CCIIXU,QFGZTD', full_width_row: true}
   components:
   - name: View_Loan_Extension
-    properties: {text: View Loan Extension, role: body, underline: true, italic: true,
-      spacing_below: none, spacing_above: none}
-    type: Link
-    components: []
+    properties: {text: View Loan Extension, underline: false, align: left, italic: false,
+      role: outlined-card, background: '', foreground: black}
+    type: Button
     layout_properties: {}
     event_bindings: {click: View_Loan_Extension_click}
   - name: View_Loan_Foreclosure
-    properties: {text: View Loan Foreclosure, underline: true, italic: true, role: body}
-    type: Link
+    properties: {text: View Loan Foreclosure, italic: false, align: left, role: outlined-card,
+      foreground: black}
+    type: Button
     layout_properties: {}
-    components: []
     event_bindings: {click: View_Loan_Foreclosure_click}
   - name: View_Loan_Requests
-    properties: {text: View Loan Requests, italic: true, underline: true, role: body}
-    type: Link
+    properties: {text: View Loan Requests, align: left, italic: false, role: outlined-card,
+      foreground: black}
+    type: Button
     layout_properties: {}
     event_bindings: {click: View_Loan_Requests_click}
   - name: Todays_Due
-    properties: {text: Today's Due, italic: true, underline: true, role: body}
-    type: Link
+    properties: {text: Today's Due, foreground: black, role: outlined-card, align: left,
+      bold: false, italic: false}
+    type: Button
     layout_properties: {}
     event_bindings: {click: Todays_Due_click}
   - name: View_Loans
-    properties: {text: View Loans, italic: true, underline: true, role: body}
-    type: Link
+    properties: {text: View Loans, foreground: black, role: outlined-card, align: left,
+      italic: false}
+    type: Button
     layout_properties: {}
     event_bindings: {click: View_Loans_click}
   - name: View_Lost_Opportunities
-    properties: {text: 'View Lost Opportunities ', underline: true, italic: true,
-      role: body}
-    type: Link
+    properties: {text: 'View Lost Opportunities ', foreground: black, role: outlined-card,
+      align: left, italic: false}
+    type: Button
     layout_properties: {}
     event_bindings: {click: View_Lost_Opportunities_click}
   - name: Change_Password
-    properties: {text: Change Password, col_spacing: tiny, underline: true, italic: true,
-      role: body}
-    type: Link
+    properties: {text: Change Password, foreground: black, role: outlined-card, align: left,
+      italic: false}
+    type: Button
     layout_properties: {}
-    event_bindings: {click: Change_Password_click}
   - name: historyView_Transaction_History
-    properties: {text: 'View Transaction History ', underline: true, italic: true,
-      role: body}
-    type: Link
+    properties: {text: 'View Transaction History ', role: outlined-card, foreground: black,
+      italic: false, align: left}
+    type: Button
     layout_properties: {}
     event_bindings: {click: historyView_Transaction_History_click}
   - name: View_Edit_Profile
-    properties: {text: View/Edit Profile, italic: true, underline: true, role: body}
-    type: Link
+    properties: {text: View/Edit Profile, foreground: black, role: outlined-card,
+      align: left, italic: false}
+    type: Button
     layout_properties: {}
     event_bindings: {click: View_Edit_Profile_click}
   - name: View_Send_Notifications
-    properties: {text: ' View/Send Notifications', spacing_above: none, spacing_below: none,
-      col_spacing: tiny, italic: true, underline: true, role: body}
-    type: Link
+    properties: {text: View/Send Notifications, foreground: black, role: outlined-card,
+      align: left, underline: false, italic: false}
+    type: Button
     layout_properties: {}
     event_bindings: {click: View_Send_Notifications_click}
   data_bindings:
   - {property: spacing_below, code: 'self.item['''']', writeback: false}
 - name: column_panel_1
-  properties: {role: elevated-card}
+  properties: {role: elevated-card, col_widths: '{"UJNXWF":5,"BREYKS":19,"RDAAZD":6,"FVJJOH":15,"JQYOUY":15}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'CCIIXU,HUNYKM VDNJEZ,JDVETN'}
   components:
+  - name: image_5
+    properties: {height: 51.399932861328125, source: _/theme/connection.png}
+    type: Image
+    layout_properties: {grid_position: 'ZGTDIJ,UJNXWF'}
   - type: Label
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
       visible: true, text: Make Visibilty, font_size: 20, font: '', spacing_above: medium,
@@ -110,7 +116,7 @@ components:
     components:
     - type: form:lendor_registration_form.Toggleswitch
       properties: {checked: false, enabled: true}
-      layout_properties: {width: 61}
+      layout_properties: {width: 94.20001220703125}
       event_bindings: {x_change: toggleswitch_1_x_change}
       name: toggleswitch_1
     - type: Button
@@ -140,7 +146,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'FHZWVZ,PQPPZT'}
     - name: label_2
-      properties: {icon: '', text: 'My Installment
+      properties: {icon: '', text: 'My Investment
 
           '}
       type: Label
@@ -186,12 +192,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'HVNINY,UPASZV EEYXZV,GWYXLY'}
   - name: column_panel_6
-    properties: {role: elevated-card, col_widths: '{"CUOOLO":15,"ZYDTNB":45}'}
+    properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
     components:
     - name: image_4
-      properties: {height: 48.20001220703125, source: _/theme/loan.png}
+      properties: {height: 55.79998779296875, source: _/theme/personal.png}
       type: Image
       layout_properties: {grid_position: 'QAERLY,CUOOLO'}
     - name: label_8
@@ -202,3 +208,51 @@ components:
       properties: {}
       type: Label
       layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
+- name: label_10
+  properties: {text: Loan History, foreground: black, bold: true, font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM BGPDWN,BOZZRM'}
+- name: column_panel_7
+  properties: {col_widths: '{}', background: '', col_spacing: none}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM VRAHCR,KZLSIU'}
+  components:
+  - name: button_1
+    properties: {text: New Loan Requests(), foreground: white, role: null, align: full,
+      background: '#007FFF', border: '', bold: true}
+    type: Button
+    layout_properties: {grid_position: 'GWOXFQ,YPNAHH'}
+    data_bindings: []
+  - name: button_2
+    properties: {text: Loan Disbursed(), foreground: white, role: elevated-button,
+      background: '#FEBE10', bold: true, align: full}
+    type: Button
+    layout_properties: {grid_position: 'GWOXFQ,DXKIFN'}
+  - name: button_3
+    properties: {text: Lost Opportunities (), foreground: white, align: full, role: null,
+      background: '#800080', bold: true}
+    type: Button
+    layout_properties: {grid_position: 'GWOXFQ,ULDUEY'}
+  - name: button_4
+    properties: {text: Closed (), foreground: white, align: full, role: null, background: '#4CBB17',
+      bold: true}
+    type: Button
+    layout_properties: {grid_position: 'GWOXFQ,BOZZYE'}
+  - name: button_5
+    properties: {text: Defaulter (), foreground: white, align: full, role: elevated-button,
+      background: '#E52B50', bold: true, enabled: true}
+    type: Button
+    layout_properties: {grid_position: 'GWOXFQ,UNJZMC'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Loan ID, data_key: column_1, width: 158.60000610351562,
+      expand: false}
+    - {id: VJQQOR, title: Loan Amount, data_key: column_2, width: 244, expand: false}
+    - {id: OJLQEN, title: Loan Status, data_key: column_3, expand: false}
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: lendor_registration_form.dashboard.RowTemplate8}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM NPTXSQ,AKYOLF', full_width_row: false}
