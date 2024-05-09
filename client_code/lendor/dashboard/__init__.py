@@ -24,6 +24,9 @@ class dashboard(dashboardTemplate):
         investment = app_tables.fin_lender.get(customer_id=self.user_id)
         if investment:
             self.label_3.text = investment['investment']
+        opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)
+        if opening_bal
+          
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form("lendor.dashboard.view_opening_balance")
