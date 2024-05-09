@@ -25,7 +25,9 @@ class dashboard(dashboardTemplate):
         if investment:
             self.label_3.text = investment['investment']
         opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)
-        if opening_bal
+        if opening_bal:
+          self.label_5.text = opening_bal['wallet_amount']
+  
           
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
