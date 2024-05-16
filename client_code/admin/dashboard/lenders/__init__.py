@@ -88,3 +88,11 @@ class lenders(lendersTemplate):
     def link_1_click(self, **event_args):
         """This method is called when the link is clicked"""
         open_form('admin.dashboard')
+
+    def search_lender(self, **event_args):
+        self.data_grid_1.visible = True
+        self.repeating_panel_2.items = anvil.server.call(
+        'search_lender',
+        self.text_box_1.text
+        )
+      

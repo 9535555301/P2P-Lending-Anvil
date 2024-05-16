@@ -19,7 +19,7 @@ components:
     type: ColumnPanel
     components:
     - name: spacer_1
-      properties: {height: 32}
+      properties: {height: 50.600006103515625}
       type: Spacer
       layout_properties: {grid_position: 'KYEEZZ,VSKFQK'}
     - name: text_box_1
@@ -41,6 +41,7 @@ components:
       - {id: OJLQEN, title: Phone NO, data_key: column_3}
       - {id: DKNZDV, data_key: column_1, title: Mail ID}
       visible: false
+      role: tonal-data-grid
     type: DataGrid
     components:
     - name: repeating_panel_2

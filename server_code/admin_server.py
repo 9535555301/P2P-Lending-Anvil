@@ -186,3 +186,16 @@ def search_borrower(query):
       or query in str(x['email_user'])
     ]
   return result
+
+@anvil.server.callable
+def search_lender(query):
+  result = app_tables.fin_user_profile.search(usertype=q.like('lender'))
+  if query:
+    result = [
+      x for x in result
+      if query in str(x['customer_id'])
+      or query in x['full_name']
+      or query in str(x['mobile'])
+      or query in str(x['email_user'])
+    ]
+  return result
