@@ -44,10 +44,15 @@ components:
       - name: data_grid_1
         properties:
           columns:
-          - {id: JKSDUP, title: Customer ID, data_key: column_1}
-          - {id: VJQQOR, title: Name, data_key: column_2}
-          - {id: OJLQEN, title: Phone No, data_key: column_3}
-          - {id: DKNZDV, data_key: column_1, title: Mail ID}
+          - {id: JKSDUP, title: Customer ID, data_key: column_1, width: 185.5999755859375,
+            expand: false}
+          - {id: VJQQOR, title: Name, data_key: column_2, width: 184.20001220703125,
+            expand: false}
+          - {id: OJLQEN, title: Phone No, data_key: column_3, width: 196.39996337890625,
+            expand: false}
+          - {id: DKNZDV, data_key: column_1, title: Mail ID, width: 198.5999755859375,
+            expand: false}
+          - {id: JDYXIT, data_key: column_1, title: ''}
           visible: false
           role: tonal-data-grid
         type: DataGrid
