@@ -1,0 +1,29 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''customer_id'']', writeback: false}
+- name: label_2
+  properties: {}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''full_name'']', writeback: false}
+- name: label_3
+  properties: {}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item['''']', writeback: false}
+- name: label_4
+  properties: {}
+  type: Label
+  layout_properties: {column: SRMJQI}
+- name: link_1
+  properties: {}
+  type: Link
+  layout_properties: {column: HDDZYG}
