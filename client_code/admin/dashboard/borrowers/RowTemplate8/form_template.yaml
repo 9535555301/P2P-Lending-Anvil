@@ -27,3 +27,7 @@ components:
   layout_properties: {column: DKNZDV}
   data_bindings:
   - {property: text, code: 'self.item[''email_user'']', writeback: false}
+- name: link_2
+  properties: {text: View Loan Details}
+  type: Link
+  layout_properties: {column: JCOGQI}
