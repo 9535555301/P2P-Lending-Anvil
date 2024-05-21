@@ -41,6 +41,7 @@ components:
   properties: {text: View Details}
   type: Link
   layout_properties: {column: WMKNBI}
+  event_bindings: {click: link_1_click}
 - name: link_2
   properties: {text: Invest Now}
   type: Link

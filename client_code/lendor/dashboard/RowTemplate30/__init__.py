@@ -15,3 +15,12 @@ class RowTemplate30(RowTemplate30Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def link_1_click(self, **event_args):
+    selcted_row=self.item
+    open_form('lendor.dashboard.view_details_1_copy',selected_row=selcted_row)
+
+
+
+
+
