@@ -118,3 +118,19 @@ class Form1(Form1Template):
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('wallet.wallet')
+
+  def home_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('borrower.dashboard')
+
+  def about_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("borrower.dashboard.dashboard_about")
+
+  def contact_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("borrower.dashboard.dashboard_contact")
+
+  def link_11_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('borrower.dashboard.dashboard_report_a_problem')

@@ -403,7 +403,7 @@ color: %color:On Primary Container%;
 
 /* Components: App Bar */
 .app-bar {
-  min-height: 56px;
+  min-height: 65px;
   padding: 0 16px 0 72px;
   position: fixed;
   width: 100%;
@@ -434,7 +434,7 @@ color: %color:On Primary Container%;
 }
 
 .app-bar.scrolled {
-  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
+  background: white;
   transition: background 250ms;
   -webkit-transition: background 250ms;
   -moz-transition: background 250ms;
@@ -446,18 +446,18 @@ color: %color:On Primary Container%;
   margin-bottom: 0;
 }
 
-.app-bar > .sidebar-toggle { display:block; float:left;  margin-left: -61px; }
+.app-bar > .sidebar-toggle { display:block; float:left;  margin-left: -61px; visibility:hidden}
 .app-bar > .top-left-btn { float: left; margin-left: -60px; margin-right: -40px; }
 .app-bar > .title { float: left; }
 .app-bar > .title > .placeholder { outline: 1px dotted; padding-left: 16px; padding-right: 16px; margin: 8px 8px 0; display:none; }
 .app-bar > .app-bar-nav { float: right; font-weight: normal; }
 .app-bar > .app-bar-nav .placeholder { margin-top: 8px; padding: 0 8px; }
-.anvil-highlight .app-bar > .app-bar-nav .placeholder { outline: 1px dotted #ccc; }
+.anvil-highlight .app-bar > .app-bar-nav .placeholder { outline: 1px dotted white; }
 .anvil-highlight .app-bar > .title > .placeholder { display:block; }
 
 .app-bar a, .app-bar .anvil-component {
   display: block;
-  color: %color:On Surface%;
+  color: white;
   line-height: 30px;
   min-width: 30px;
   min-height: 30px;
