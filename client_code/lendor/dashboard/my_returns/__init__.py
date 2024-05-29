@@ -68,6 +68,9 @@ class my_returns(my_returnsTemplate):
     # Set the plot in the Plot component
     self.plot_1.data = fig
 
+    # Force re-rendering of the plot component by setting the layout
+    self.plot_1.layout = layout
+
     # Debugging: Check if the plot is assigned correctly
     print(f"Assigned figure to plot_1: {self.plot_1.data}")
 
