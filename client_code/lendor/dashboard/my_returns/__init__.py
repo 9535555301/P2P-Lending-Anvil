@@ -61,6 +61,10 @@ class my_returns(my_returnsTemplate):
     # Debugging: Print the figure to ensure it's created
     print(f"Created figure: {fig}")
 
+    # Debugging: Check if plot_1 is a valid component
+    if hasattr(self, 'plot_1'):
+        print("plot_1 is a valid component")
+
     # Set the plot in the Plot component
     self.plot_1.data = fig
 
