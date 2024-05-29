@@ -67,7 +67,7 @@ components:
       - name: label_2
         properties: {icon: '', text: 'My Commitments
 
-            '}
+            ', bold: true}
         type: Label
         layout_properties: {grid_position: 'BJUXXD,DMUXBO GGORVD,QGVFNC'}
       - name: label_3
@@ -86,7 +86,7 @@ components:
       - name: label_4
         properties: {text: 'Opening Balance
 
-            '}
+            ', bold: true}
         type: Label
         layout_properties: {grid_position: 'LIIRFK,ZHEDGR AXQTMV,AFQALW'}
       - name: label_5
@@ -94,7 +94,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'LIIRFK,ZHEDGR YVDJCL,QQHYRO'}
     - name: column_panel_5
-      properties: {role: elevated-card, col_widths: '{"UKYYYV":20,"UPASZV":40}'}
+      properties: {role: elevated-card, col_widths: '{"UKYYYV":20,"UPASZV":40,"NKVJDG":11,"TZCKSY":49}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
       components:
@@ -104,14 +104,19 @@ components:
         layout_properties: {grid_position: 'HVNINY,UKYYYV'}
         event_bindings: {mouse_up: image_3_mouse_up}
       - name: label_6
-        properties: {text: My Returns, align: left, background: white, foreground: black}
+        properties: {text: My Returns, align: left, background: white, foreground: black,
+          bold: true}
         type: Button
-        layout_properties: {grid_position: 'HVNINY,UPASZV BFGCWY,ADJHYM', full_width_row: true}
+        layout_properties: {grid_position: 'HVNINY,UPASZV', full_width_row: true}
         event_bindings: {click: label_6_click}
+      - name: spacer_5
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'HVNINY,UPASZV UKYRCM,NKVJDG'}
       - name: label_7
         properties: {align: left}
         type: Label
-        layout_properties: {grid_position: 'HVNINY,UPASZV'}
+        layout_properties: {grid_position: 'HVNINY,UPASZV UKYRCM,TZCKSY'}
     - name: column_panel_6
       properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}'}
       type: ColumnPanel
@@ -122,7 +127,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'QAERLY,CUOOLO'}
       - name: label_8
-        properties: {text: New Loan Request}
+        properties: {text: New Loan Request, bold: true}
         type: Label
         layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
       - name: label_9
@@ -289,7 +294,8 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: link_1
-    properties: {text: View Loan Requests, foreground: '#013065', icon: _/theme/borrower/dashboard/%20new%20loan%20request.png}
+    properties: {text: View Loan Requests, foreground: '#013065', icon: _/theme/borrower/dashboard/%20new%20loan%20request.png,
+      bold: false}
     type: Link
     layout_properties: {grid_position: 'IVSPJZ,CGCMKH'}
     event_bindings: {click: link_1_click}

@@ -100,7 +100,7 @@ class my_returns(my_returnsTemplate):
       title='Investment and Returns for User',
       xaxis=dict(title='Category'),
       yaxis=dict(title='Amount'),
-      barmode=''  # Use group mode to display bars side by side
+      barmode='group'  # Use group mode to display bars side by side
     )
 
     # Create a figure
