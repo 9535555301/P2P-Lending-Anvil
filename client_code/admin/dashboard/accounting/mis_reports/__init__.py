@@ -261,6 +261,7 @@ class mis_reports(mis_reportsTemplate):
             self.label_12.text = first_row['total_products_count']
             self.label_8.text = first_row['total_lenders_invested']
             self.label_16.text =first_row['platform_returns']
+            self.label_18.text = sum(lender['lender_total_commitments'] for lender in app_tables.fin_lender.search())
 
   
     def plot_data(self):
@@ -273,7 +274,7 @@ class mis_reports(mis_reportsTemplate):
         no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
         no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed loan'])
         no_of_loans_rejected = len([loan for loan in loan_details if loan['loan_updated_status'] == 'rejected'])
-        # amount_disbursed = sum([loan['lender_returns'] for loan in loan_details])
+        lender_share = sum([loan['lender_returns'] for loan in loan_details])
         no_of_borrowers = len([user for user in users if user['usertype'] == 'borrower'])
         no_of_lenders = len([user for user in users if user['usertype'] == 'lender'])
         lenders_commitment = sum([lender['return_on_investment'] for lender in lenders])
@@ -283,7 +284,7 @@ class mis_reports(mis_reportsTemplate):
             no_of_loans_disbursed,
             no_of_loans_closed,
             no_of_loans_rejected,
-            # amount_disbursed,
+            lender_share,
             no_of_borrowers,
             no_of_lenders,
             lenders_commitment
@@ -292,7 +293,7 @@ class mis_reports(mis_reportsTemplate):
             'No of Loans Disbursed: {}'.format(no_of_loans_disbursed),
             'No of Loans Closed: {}'.format(no_of_loans_closed),
             'No of Loans Rejected: {}'.format(no_of_loans_rejected),
-            # 'Amount Disbursed: {}'.format(amount_disbursed),
+            'Lender Share: {}'.format(lender_share),
             'No of Borrowers: {}'.format(no_of_borrowers),
             'No of Lenders: {}'.format(no_of_lenders),
             'Lenders Commitment: {}'.format(lenders_commitment)
