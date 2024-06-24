@@ -318,9 +318,6 @@ def get_combined_user_and_guarantor_data_2():
 
 
 
-
-
-
 @anvil.server.callable
 def update_fin_platform_fees():
     # Step 1: Calculate the number of lenders
@@ -332,7 +329,13 @@ def update_fin_platform_fees():
     # Step 3: Calculate the number of products
     num_products = len(app_tables.fin_product_details.search())
     
-    # Step 4: Determine the most used product name
+    # Step 4: Calculate the number of unique borrowers who have taken a loan
+    borrower_ids = set()
+    for loan in app_tables.fin_loan_details.search():
+        borrower_ids.add(loan['borrower_customer_id'])
+    total_borrowers_loan_taken = len(borrower_ids)
+    
+    # Step 5: Determine the most used product name
     product_usage = {}
     for loan in app_tables.fin_loan_details.search():
         product_name = loan['product_name']
@@ -348,7 +351,7 @@ def update_fin_platform_fees():
     # Find the product name with the highest count
     most_used_product_name = max(product_usage, key=product_usage.get)
     
-    # Step 5: Update the fin_platform_fees table
+    # Step 6: Update the fin_platform_fees table
     fee_record = app_tables.fin_platform_details.get()  # Assuming there's only one record, or adapt as needed
 
     # If no fee record exists, add a new row
@@ -359,6 +362,57 @@ def update_fin_platform_fees():
         total_lenders=num_lenders,
         total_borrowers=num_borrowers,
         total_products_count=num_products,
-        most_used_product=most_used_product_name
+        most_used_product=most_used_product_name,
+        total_borrowers_loan_taken=total_borrowers_loan_taken
     )
+
+    # return "Platform fees updated successfully."
+
+
+
+
+
+# @anvil.server.callable
+# def update_fin_platform_fees():
+#     # Step 1: Calculate the number of lenders
+#     num_lenders = len(app_tables.fin_user_profile.search(usertype='lender'))
+    
+#     # Step 2: Calculate the number of borrowers
+#     num_borrowers = len(app_tables.fin_user_profile.search(usertype='borrower'))
+    
+#     # Step 3: Calculate the number of products
+#     num_products = len(app_tables.fin_product_details.search())
+
+#     total_borrowers_loan_taken = len(app_tables.fin_loan_details.search())
+    
+#     # Step 4: Determine the most used product name
+#     product_usage = {}
+#     for loan in app_tables.fin_loan_details.search():
+#         product_name = loan['product_name']
+#         if product_name in product_usage:
+#             product_usage[product_name] += 1
+#         else:
+#             product_usage[product_name] = 1
+    
+#     # If no loans found, handle it gracefully
+#     if not product_usage:
+#         return "No loans found to determine the most used product."
+    
+#     # Find the product name with the highest count
+#     most_used_product_name = max(product_usage, key=product_usage.get)
+    
+#     # Step 5: Update the fin_platform_fees table
+#     fee_record = app_tables.fin_platform_details.get()  # Assuming there's only one record, or adapt as needed
+
+#     # If no fee record exists, add a new row
+#     if fee_record is None:
+#         fee_record = app_tables.fin_platform_details.add_row()
+    
+#     fee_record.update(
+#         total_lenders=num_lenders,
+#         total_borrowers=num_borrowers,
+#         total_products_count=num_products,
+#         most_used_product=most_used_product_name,
+#         total_borrowers_loan_taken = total_borrowers_loan_taken
+#     )
 
