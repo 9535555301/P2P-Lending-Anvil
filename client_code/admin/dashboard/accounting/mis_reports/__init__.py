@@ -572,3 +572,7 @@ class mis_reports(mis_reportsTemplate):
     def link_1_click(self, **event_args):
       """This method is called when the link is clicked"""
       open_form('admin.dashboard.accounting.mis_reports.lender_share')
+
+    def button_9_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.accounting.mis_reports.behavioural_report')
