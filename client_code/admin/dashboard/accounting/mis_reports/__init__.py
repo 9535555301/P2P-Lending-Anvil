@@ -263,7 +263,7 @@ class mis_reports(mis_reportsTemplate):
             self.label_12.text = first_row['total_products_count']
             self.label_8.text = first_row['total_lenders_invested']
             self.label_16.text =first_row['platform_returns']
-            self.link_1.text = sum(lender['return_on_investment'] for lender in app_tables.fin_lender.search())
+            # self.link_1.text = sum(lender['return_on_investment'] for lender in app_tables.fin_lender.search())
 
   
     def plot_data(self):
