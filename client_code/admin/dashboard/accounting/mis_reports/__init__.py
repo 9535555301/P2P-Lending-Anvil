@@ -477,7 +477,9 @@ class mis_reports(mis_reportsTemplate):
         """Check if all 'days_left' for a given loan_id are zero"""
         emi_details = app_tables.fin_emi_table.search(loan_id=loan_id)
         for emi in emi_details:
-            if emi['days_left'] > 0:
+            # Ensure None values are handled
+            days_left = emi['days_left'] if emi['days_left'] is not None else 0
+            if days_left > 0:
                 return False
         return True
 
