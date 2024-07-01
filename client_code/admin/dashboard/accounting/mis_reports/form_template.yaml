@@ -180,7 +180,7 @@ components:
           font: ''
         type: Button
         layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
-        event_bindings: {click: button_9_click}
+        event_bindings: {}
         name: add_people
     - properties: {col_widths: '{}', background: white, role: elevated-card}
       type: ColumnPanel
