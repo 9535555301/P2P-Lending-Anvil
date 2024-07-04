@@ -564,7 +564,6 @@ def create_zaphod_pdf():
 
 
 
-
 @anvil.server.callable
 def get_notifications(user_id):
     notifications = []
@@ -582,7 +581,7 @@ def get_notifications(user_id):
             notifications.append({
                 'message': f"Your loan for {loan['product_name']} is {loan_status}",
                 'loan_updated_status': loan_status,
-                'read': loan.get('notification_read', False),
+                'read': loan['notification_read'] if 'notification_read' in loan else False,
                 'date': notification_date,
                 'customer_id': loan['borrower_customer_id'],
                 'loan_id': loan['loan_id']
@@ -593,9 +592,7 @@ def get_notifications(user_id):
 def mark_notification_as_read(loan_id):
     loan = app_tables.fin_loan_details.get(loan_id=loan_id)
     if loan:
-        loan['notification_read'] = True
-        loan['notification_date'] = datetime.now().date()
-        loan.save()  # Save the loan record after updating
+        loan['notification_read'] = True  # Directly update the field
 
 @anvil.server.callable
 def update_notifications(user_id):
@@ -603,12 +600,9 @@ def update_notifications(user_id):
     for loan in loans:
         loan_status = loan['loan_updated_status']
         if loan_status in ['rejected', 'approved', 'disbursed']:
-            if not loan.get('notification_read', False):
-                loan['notification_read'] = False
+            loan['notification_read'] = False
         else:
             loan['notification_read'] = True
-        loan.save()  # Save the loan record after updating
-
 
 
 

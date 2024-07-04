@@ -13,7 +13,7 @@ SUPERSCRIPT_DIGITS = {
 }
 
 def to_superscript(number):
-    return ''.join(SUPERSCRIPT_DIGITS[digit] for digit in str(number))
+    return ''.join(SUPERSCRIPT_DIGITS.get(digit, '') for digit in str(number))
 
 class dashboard(dashboardTemplate):
     def __init__(self, **properties):
@@ -67,7 +67,7 @@ class dashboard(dashboardTemplate):
         self.update_notification_count(unread_count)
 
     def notifications_click(self, **event_args):
-        open_form('borrower_notifications', user_Id=self.user_Id)
+        open_form('borrower.dashboard.borrower_notifications', user_Id=self.user_Id)
 
     # All other link click methods...
 
