@@ -52,7 +52,7 @@ class signup_page(signup_pageTemplate):
                 user_module.add_email_and_user_id(email ,password, self.user_type)
                 main_form_module.email = email
                 main_form_module.flag = True
-                open_form('bank_users.main_form.login_page')
+                open_form('bank_users.main_form.signin_page')
       else:
         self.retype_password_error_label.text = 'Email is already exists'
         self.retype_password_error_label.visible = True
@@ -69,7 +69,7 @@ class signup_page(signup_pageTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('bank_users.main_form.login_page')
+    open_form('bank_users.main_form.signin_page')
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -89,7 +89,7 @@ class signup_page(signup_pageTemplate):
 
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.login_page')
+    open_form('bank_users.main_form.signin_page')
 
   def send_otp_click(self, **event_args):
     email = self.text_box_1.text.strip()
