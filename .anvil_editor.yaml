@@ -109,7 +109,6 @@ unique_ids:
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_no_of_emp: '1706531881285776983025492.1349'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_spouse_profession: '1710495428888891993954718.6715'
     lendor.dashboard.view_loan_extension_requests.ItemTemplate76: '1709795514432851964860166.374'
-    borrower.dashboard.apply_loan_request.loan_type: ANNGDK2MDLK4OO2TINTHVK2BSIKN6FNK
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request.RowTemplate11: '1700543062684858008325535.9921'
     bank_users.main_form.products_main_form.business_loan: '1713872535273312835846132.24066'
     admin.dashboard.accounting.mis_reports.behavioural_report.extension: '1719312939563302883633335.3433'
